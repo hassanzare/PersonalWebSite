@@ -7,16 +7,29 @@ import Sidedrawers from "./Sidedrawers";
 
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [headerShow, setHeaderShow] = useState(false);
 
   const toggleDrawer = (value) => {
     setDrawerOpen(value);
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setHeaderShow(true);
+    } else {
+      setHeaderShow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <AppBar
       position="fixed"
       style={{
-        backgroundColor: "#81728a",
+        backgroundColor: headerShow ? "#81728a" : "transparent",
         boxShadow: "none",
         Padding: "10px 0px",
       }}
@@ -24,7 +37,10 @@ const Header = () => {
       <Toolbar>
         <div className="header_logo">
           <div className="font_righteous header_logo_venue">Hasan Zare</div>
-          <div className="header_logo_title">
+          <div
+            className="header_logo_title"
+            style={{ display: headerShow ? "inline" : "none" }}
+          >
             یک برنامه نویس خود آموزکه همواره در حال یادگیری هست
           </div>
         </div>
