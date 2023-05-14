@@ -57,7 +57,8 @@ header .header_logo_venue {
 }
 
 header .header_logo_title {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
+  margin: 10px 0;
 }
 
 /*====================
