@@ -3,7 +3,7 @@ const Footer = () => {
   const [showFooter, setShowFooter] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 2500) {
+    if (window.scrollY > 2650) {
       setShowFooter(true);
     } else {
       setShowFooter(false);

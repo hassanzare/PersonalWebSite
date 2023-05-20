@@ -16,17 +16,14 @@ const Carrousel = () => {
   };
 
   return (
-    <div
-      className="carrousel_wrapper"
-      style={{ height: `${window.innerHeight}px` }}
-    >
+    <div className="carrousel_wrapper" style={{ height: "700px" }}>
       <Slider {...settings}>
         <div>
           <div
             className="carrousel_image"
             style={{
               background: `url(${slide_one})`,
-              height: `${window.innerHeight}px`,
+              height: "700px",
             }}
           ></div>
         </div>
@@ -35,7 +32,7 @@ const Carrousel = () => {
             className="carrousel_image"
             style={{
               background: `url(${slide_tow})`,
-              height: `${window.innerHeight}px`,
+              height: "700px",
             }}
           ></div>
         </div>
